@@ -28,6 +28,7 @@ console.log(secondBurger.ingredients[0]); // Salad //secondo me verranno creati 
 */
 
 
+/*
 
 //🏆 Code Question 3
 const hamburger = { 
@@ -47,3 +48,30 @@ const hamburger = {
 const secondBurger = structuredClone(hamburger);
 const thirdBurger = structuredClone(hamburger);
 //Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 9 oggetti (3 hamburgher, ognuno con un maker che al suo interno conterrà i rispettivi 3 restaurant)
+
+*/
+
+
+
+//🏆 Code Question 4
+
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+}
+
+const restaurant = {
+    name: "Hyur's Burgers",
+    address: {
+        street: 'Main Street',
+        number: 123,
+    },
+    openingDate: new Date(2025, 3, 11),
+    isOpen: false,
+};
+
+// Qual è il metodo migliore per clonare l’oggetto chef, e perché? una shallow copy in modo da poter lavorare anche sulla funzione, in quanto le deep copy non copiano funzioni.
+// Qual è il metodo migliore per clonare l’oggetto restaurant, e perché? una deep copy in modo da poter mantenere tale il tipo di dato della data (new Date), in quanto le shallow copy l'avrebbero resa una stringa.
