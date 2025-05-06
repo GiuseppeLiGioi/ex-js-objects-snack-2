@@ -22,5 +22,7 @@ const hamburger = {
 const secondBurger = {...hamburger};
 secondBurger.ingredients[0] = "Salad";
 
-console.log(hamburger.ingredients[0]); // ?
-console.log(secondBurger.ingredients[0]); // ?
+console.log(hamburger.ingredients[0]); // Salad
+console.log(secondBurger.ingredients[0]); // Salad //secondo me verranno creati due oggetti in memoria e per quanto riguarda l'array "ingredients" verrà solo fatto riferimentop in quanto si tratti di una shyallow copy.
+console.log('hamburgher' ,hamburger)
+console.log('secondBurger' ,secondBurger)
