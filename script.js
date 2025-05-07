@@ -81,7 +81,7 @@ const restaurant = {
 
 /*
 
-*/
+
 
 //🎯 Code Question 5 (Bonus)
 const hamburger = { 
@@ -121,3 +121,47 @@ console.log(hamburger.maker.restaurant.name); // Hyur's II
 console.log(secondBurger.maker.restaurant.name); // Hyur's II
 
 //Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 5 oggetti, 3 iniziali (hamburger, maker, restaurant), 1 restaurant a riga 101, 1 hambruger a riga 110.
+*/
+
+/*
+//🎯 Code Question 6 (Bonus)
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+    restaurant: {
+        name: "Hyur's Burgers",
+        welcomeClient: () => {
+            console.log("Benvenuto!");
+        },
+        address: {
+            street: 'Main Street',
+            number: 123,
+            showAddress: () => {
+                console.log("Main Street 123");
+            }
+        },
+        isOpen: true,
+    }
+}
+//Qual è il metodo migliore per clonare l’oggetto chef, e perché? Secondo me una "shallow copy", in quanto le "deep copy" non copiano le funzioni.
+*/
+
+/*
+const copiaChef = {
+...chef,
+restaurant: {
+...chef.restaurant,
+address: {...chef.restaurant.address}
+}
+}
+*/
+
+
+
+
+
+
+
