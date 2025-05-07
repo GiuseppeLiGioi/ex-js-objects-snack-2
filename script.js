@@ -123,7 +123,7 @@ console.log(secondBurger.maker.restaurant.name); // Hyur's II
 //Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 5 oggetti, 3 iniziali (hamburger, maker, restaurant), 1 restaurant a riga 101, 1 hambruger a riga 110.
 */
 
-/*
+
 //🎯 Code Question 6 (Bonus)
 const chef = {
     name: "Chef Hyur",
@@ -147,7 +147,7 @@ const chef = {
     }
 }
 //Qual è il metodo migliore per clonare l’oggetto chef, e perché? Secondo me una "shallow copy", in quanto le "deep copy" non copiano le funzioni.
-*/
+
 
 /*
 const copiaChef = {
@@ -162,6 +162,36 @@ address: {...chef.restaurant.address}
 
 
 
+//🎯 Snack 7 (Bonus)
+//Crea una funzione che permette la copia profonda (deep copy) di un oggetto, che copia anche i suoi metodi (proprietà che contengono funzioni). Usa l’oggetto di Code Question 6 come test.
 
+
+//FUNZIONE RICORSIVA: UNA FUNZIONE CHE RICHIAMA SE STESSA PER OTTENERE IL RISULTATO.
+
+//FUNZIONE SVOLTA DOPO AVER VISTO E COMPRESO LA SPIEGAZIONE.
+
+function copiaChef(obj){
+    if(typeof obj !== 'object'){
+        return obj;
+    }else{
+        const copy = {};
+      for(const key in obj){
+        const value = obj[key];
+        if(value !== 'object'){
+            copy[key] = value;
+        }else{
+            copy[key] = copiaChef(value);
+        }
+      }
+      return copy;
+    }
+    
+}
+
+
+
+const chefGiuse = copiaChef(chef);
+
+console.log(chefGiuse)
 
 
